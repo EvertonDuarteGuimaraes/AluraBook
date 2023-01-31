@@ -1,0 +1,179 @@
+.cabecalho__menu-hamburger {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/MenuHamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburger {
+    background-image: url("../img/MenuBranco.svg");
+}
+
+.container__botao:checked ~ .container__rotulo {
+    background: var(--azul-degrade);
+}
+
+.container__rotulo {
+    padding: 1.6em 1em;
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container__imagem {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5em;
+    
+}
+
+.container__imagem--coracao,
+.container__imagem--sacola,
+.container__image--perfil {
+    padding: 1em;
+}
+
+.lista__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__botao:checked ~ .lista__menu{
+    display: block;
+}
+
+
+
+.lista__menu, .lista__menu-item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista__menu-link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.lista__menu-titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--font-h1);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        display: block;
+        font: 400;
+        margin: 0.5em 0 0 0.5em;
+    }
+    
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes__item {
+        margin: 2em 1.25em 0 1.25em;
+        font-weight: 400;
+        color: var(--preto);
+    }
+
+    .opcoes__item--link {
+        color: var(--preto);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .container__imagem--coracao {
+        display: none;
+    }
+
+    .container__imagem {
+        margin: 0 2em;
+    }
+
+    .container__imagem--coracao,
+    .container__iamgem--sacola,
+    .container__imagem--perfil {
+        margin: 0 2.5em;
+    }
+
+    .cabecalho__menu-hamburger {
+        display: none;
+    }
+
+    .logo__alura--books {
+        margin-left: 2.5em;
+    }
+
+    .opcoes__botao:checked ~ .lista__menu {
+        display: block;
+    }
+    
+    .opcoes__botao {
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opcoes__item {
+        padding: 1em 1.6em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opcoes__container {
+        margin-right: auto;
+    }
+}
